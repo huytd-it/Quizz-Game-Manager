@@ -28,7 +28,7 @@ Route::name('linh-vuc.')->group(function(){
 
 });
 Route::get('goi_credit', 'GoiCreditController@index')->name('goi_credit');
-
+Route::get('luot_choi', 'LuotChoiController@index') ->name('luot_choi');
 Auth::routes();
 //Route::resource('goi_credit', 'GoiCreditController');
 /*Route::get('/linh-vuc', function () {

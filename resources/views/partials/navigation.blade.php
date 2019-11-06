@@ -402,7 +402,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"> <i class="la la-briefcase"></i>Elements <div class="arrow-down"></div></a>
+                        <a href="{{route('luot_choi')}}"> <i class="la la-briefcase"></i>Lượt chơi <div class="arrow-down"></div></a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
@@ -661,6 +661,76 @@
                                     </li>
                                 </ul>
                             </li>
+
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#"> <i class="la la-file-text-o"></i>Pages <div class="arrow-down"></div></a>
+                        <ul class="submenu megamenu">
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="pages-starter.html">Starter</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-login.html">Log In</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-register.html">Register</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-recoverpw.html">Recover Password</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-lock-screen.html">Lock Screen</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-logout.html">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="pages-confirm-mail.html">Confirm Mail</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-404.html">Error 404</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-404-alt.html">Error 404-alt</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-500.html">Error 500</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-profile.html">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-timeline.html">Timeline</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="extras-invoice.html">Invoice</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-faqs.html">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-pricing.html">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-maintenance.html">Maintenance</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-coming-soon.html">Coming Soon</a>
+                                    </li>
+                                </ul>
+                            </li>
+
                         </ul>
                     </li>
 
