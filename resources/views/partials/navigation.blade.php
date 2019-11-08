@@ -596,7 +596,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"> <i class="la la-file-text-o"></i>Pages <div class="arrow-down"></div></a>
+                        <a href="{{route('ds_lichsumuacredit')}}"> <i class="la la-file-text-o"></i>Lịch Sử Mua Credit <div class="arrow-down"></div></a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>

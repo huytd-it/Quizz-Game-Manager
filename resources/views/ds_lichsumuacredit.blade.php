@@ -30,7 +30,7 @@
                     <div class="col-lg-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <h1 class="header-title">Danh sách gói credit</h1>
+                                <h1 class="header-title">Danh sách mua gói credit</h1>
                                 <a href="{{route('linh-vuc.them-moi')}}">
                                 <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
                                 </a>
@@ -39,19 +39,21 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>TÊN GÓI</th>
+                                            <th>NGUOI_CHOI</th>
+                                            <th>GOI_CREDIT</th>
                                             <th>CREDIT</th>
-                                            <th>SỐ TIỀN</th>
+                                            <th>SO_TIEN</th>
                                             <th>xóa/Sữa</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       @foreach($goiCredit as $goi)
+                                       @foreach($LichSuMuaCredit as $ds)
                                         <tr>
-                                            <td>{{$goi->id}}</td>
-                                            <td>{{$goi->ten_goi}}</td>
-                                            <td>{{$goi->credit}}</td>
-                                            <td>{{$goi->so_tien}}</td>
+                                            <td>{{$ds->id}}</td>
+                                            <td>{{$ds->nguoi_choi_id}}</td>
+                                            <td>{{$ds->goi_credit_id}}</td>
+                                            <td>{{$ds->credit}}</td>
+                                            <td>{{$ds->so_tien}}</td>
                                             <td>
                                             <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
                                              <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
