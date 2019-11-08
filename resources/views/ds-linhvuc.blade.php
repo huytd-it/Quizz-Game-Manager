@@ -61,18 +61,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @for($i =0;$i<101;$i++)
+                                        @foreach($dslinhvuc as $linhvuc)
                                         <tr>
-                                            <td>{{$i}}</td>
-                                            <td>System Architect {{$i}}</td>
-                                           
+                                            <td>{{$linhvuc->id}}</td>
+                                            <td>{{$linhvuc->ten_linh_vuc}}</td>
                                             <td>
                                                 <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
                                                 <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
                                             </td>
 
                                         </tr>
-                                        @endfor
+                                        @endforeach
                                     </tbody>
                                 </table>
 

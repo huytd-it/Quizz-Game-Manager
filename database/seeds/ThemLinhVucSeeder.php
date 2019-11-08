@@ -11,6 +11,7 @@ class ThemLinhVucSeeder extends Seeder
      */
     public function run()
     {
+        
         DB::table('linh_vuc')->insert([
             ['ten_linh_vuc'=>'Toán'],
             ['ten_linh_vuc'=>'Lý'],
