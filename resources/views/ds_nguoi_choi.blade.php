@@ -23,56 +23,49 @@
         <script src="{{ asset('libs/pdfmake/pdfmake.min.js')}}"></script>
         <script src="{{ asset('libs/pdfmake/vfs_fonts.js')}}"></script>
         <!-- third party js ends -->
-
-        <script>
-            $(document).ready(function(){
-                $("#basic-datatable").DataTable({
-                    language:{
-                        paginate:{
-                            previous:"<i class='mdi mdi-chevron-left'>",
-                            next:"<i class='mdi mdi-chevron-right'>"
-                        }
-                    },
-                    drawCallback:function(){
-                        $(".dataTables_paginate > .pagination").addClass("pagination-rounded")
-                    }
-                });
-            });
-        </script>
+        <script src="{{asset('js/pages/datatables.init.js')}}"></script>
 @endsection
 @section('main-content')
-<div class="row">
-                    <div class="col-12">
+<div class="row justify-content-center">
+                    <div class="col-lg-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Danh sách lĩnh vực</h4>
-                                <p class="text-muted font-13 mb-4">
-                                </p>
+                                <h1 class="header-title">Danh Sách Người Chơi</h1>
                                 <a href="{{route('linh-vuc.them-moi')}}">
-                                        <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
-                                    </a>
+                                <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
+                                </a>
                                 <h1></h1><br>
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tên lĩnh vực</th>
-                                            <th>Xóa/Sữa</th>
+                                            <th>TÊN ĐĂNG NHẬP</th>
+                                            <th>MẬT KHẨU</th>
+                                            <th>EMAIL</th>
+                                            <th>HINH ĐẠI DIỆN</th>
+                                            <th>ĐIỂM CAO NHẤT</th>
+                                            <th>CREDIT</th>
+                                            <th>XÓA/SỮA</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($dslinhvuc as $linhvuc)
+                                       @foreach($nguoiChoi as $nc)
                                         <tr>
-                                            <td>{{$linhvuc->id}}</td>
-                                            <td>{{$linhvuc->ten_linh_vuc}}</td>
+                                            <td>{{$nc->id}}</td>
+                                            <td>{{$nc->ten_dang_nhap}}</td>
+                                            <td>{{$nc->mat_khau}}</td>
+                                            <td>{{$nc->email}}</td>
+                                            <td>{{$nc->hinh_dai_dien}}</td>
+                                            <td>{{$nc->diem_cao_nhat}}</td>
+                                            <td>{{$nc->credit}}</td>
                                             <td>
-                                                <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                                <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                            <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
+                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
                                             </td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
+
                                 </table>
 
                             </div> <!-- end card body-->
