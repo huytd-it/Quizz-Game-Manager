@@ -444,8 +444,8 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#">
-                            <i class="la la-diamond"></i>Components <div class="arrow-down"></div></a>
+                        <a href="{{route('cau_hoi')}}">
+                            <i class="la la-diamond"></i>Câu Hỏi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li class="has-submenu">
                                 <a href="#"><i class="fe-bookmark mr-1"></i> Forms <div class="arrow-down"></div></a>
@@ -569,7 +569,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"> <i class="la la-flask"></i>Admin UI <div class="arrow-down"></div></a>
+                        <a href="{{route('nguoi_choi')}}"> <i class="la la-flask"></i>Người Chơi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
                                 <a href="admin-widgets.html">Widgets</a>

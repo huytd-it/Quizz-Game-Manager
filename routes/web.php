@@ -41,8 +41,14 @@ Route::middleware('auth')->group(function(){
 
     Route::get('goi_credit', 'GoiCreditController@index')->name('goi_credit');
     Route::get('luot_choi', 'LuotChoiController@index') ->name('luot_choi');
+    Route::get('/cau_hoi','CauHoiController@index')->name('cau_hoi');
+    Route::get('/nguoi_choi','NguoiChoiController@index')->name('nguoi_choi');
 
 });
+
+Route::get('/them_cau_hoi',function(){
+    return view('them_cau_hoi');
+})->name('them_moi_cau_hoi');
 
 
 Auth::routes();

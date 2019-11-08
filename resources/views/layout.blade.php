@@ -42,7 +42,7 @@
                                     <li class="breadcrumb-item active">Starter</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Starter</h4>
+                            @yield('title')
                         </div>
                     </div>
                 </div>
@@ -177,10 +177,8 @@
 
          @yield('js')
 
-            <!-- Datatables init -->
-
- <!-- App js-->
- <script src="{{ asset('js/app.min.js')}}"></script>
+        <!-- App js-->
+        <script src="{{ asset('js/app.min.js')}}"></script>
 
 
 
