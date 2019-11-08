@@ -18,6 +18,7 @@ class QuanTriVienController extends Controller
         $mat_khau = $request->mat_khau;
 
         if(Auth::attempt(['ten_dang_nhap' => $ten_dang_nhap, 'password' => $mat_khau])){
+            $user = $this->layThongTin();
             return redirect()->route('trang-chu') ;
         }
         return redirect()->route('dang_nhap');
@@ -25,5 +26,8 @@ class QuanTriVienController extends Controller
     public function dangXuat(){
         Auth::logout();
         return redirect()->route('dang-nhap');
+    }
+    public function layThongTin(){
+        return Auth::user();
     }
 }

@@ -32,19 +32,14 @@
             <h4 class="header-title ">Thêm lĩnh vực</h4>
         <div class="card-box row justify-content-center">
 
-
-
-            <form action="#" class="parsley-examples col-xl-6 ">
+            <form action="{{ route('linh-vuc.luu-tru') }}" method="POST" class="parsley-examples col-xl-6 ">
+                @csrf
 
                 <div class="form-group ">
-                    <label for="tenLinhVuc">Tên lĩnh vực<span class="text-danger">*</span></label>
-                    <input type="text" name="nick" parsley-trigger="change" required
-                           placeholder="Nhập tên lĩnh vực" class="form-control" id="userName">
+                    <label for="ten_linh_vuc">Tên lĩnh vực<span class="text-danger">*</span></label>
+                    <input type="text" name="ten_linh_vuc"  parsley-trigger="change" required
+                           placeholder="Nhập tên lĩnh vực" class="form-control" id="ten_linh_vuc">
                 </div>
-
-
-
-
                 <div class="form-group text-right mb-0">
                     <button class="btn btn-primary waves-effect waves-light mr-1" type="submit">
                        Thêm

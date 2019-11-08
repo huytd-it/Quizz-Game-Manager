@@ -28,13 +28,11 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('/linh-vuc')->group(function(){
         Route::name('linh-vuc.')->group(function(){
-            Route::get('/', function () {
-                return view('ds-linhvuc');
-            })->name('danh-sach');
+            Route::get('/','LinhVucController@index')->name('danh-sach');
+            Route::get('/them-moi','LinhVucController@create')->name('them-moi');
+            Route::post('/luu-tru','LinhVucController@store')->name('luu-tru');
 
-            Route::get('/them-moi', function () {
-                return view('them-moi-linh-vuc');
-            })->name('them-moi');
+
 
         });
     });
