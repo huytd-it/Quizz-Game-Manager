@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(QuanTriVienSeeder::class);
         $this->call(ThemGoiCreditSeeder::class);
         $this->call(ThemLinhVucSeeder::class);
+        $this->call(ThemCauHoiSeerder::class);
+        $this->call(ThemNguoiChoiSeeder::class);
     }
 }
