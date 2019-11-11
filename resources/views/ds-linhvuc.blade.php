@@ -62,15 +62,17 @@
                                     </thead>
                                     <tbody>
                                         @foreach($dslinhvuc as $linhvuc)
+                                        @if($linhvuc->deleted_at == null)
                                         <tr>
                                             <td>{{$linhvuc->id}}</td>
                                             <td>{{$linhvuc->ten_linh_vuc}}</td>
                                             <td>
-                                                <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                                <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                <a href="{{ route('linh-vuc.xoa',['id'=>$linhvuc->id])}}"><button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button></a>
+                                                <a href="{{ route('linh-vuc.chinh-sua',['id'=>$linhvuc->id] ) }}"><button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button></a>
                                             </td>
 
                                         </tr>
+                                        @endif
                                         @endforeach
                                     </tbody>
                                 </table>

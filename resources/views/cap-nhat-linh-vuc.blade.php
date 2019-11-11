@@ -29,11 +29,12 @@
 @section('main-content')
 <div class="row">
     <div class="col-lg-12 ">
-
+            <h4 class="header-title ">Cập nhật lĩnh vực</h4>
         <div class="card-box row justify-content-center">
-            <h2 class="header-title ">Thêm lĩnh vực</h2>
-            <form action="{{ route('linh-vuc.luu-tru') }}" method="POST" class="parsley-examples col-xl-6 ">
+
+            <form action="{{ route('linh-vuc.cap-nhat',['id'=>$id])}}" method="POST" class="parsley-examples col-xl-6 ">
                 @csrf
+
                 <div class="form-group ">
                     <label for="ten_linh_vuc">Tên lĩnh vực<span class="text-danger">*</span></label>
                     <input type="text" name="ten_linh_vuc"  parsley-trigger="change" required
@@ -41,7 +42,7 @@
                 </div>
                 <div class="form-group text-right mb-0">
                     <button class="btn btn-primary waves-effect waves-light mr-1" type="submit">
-                       Thêm
+                       Cập nhật
                     </button>
                     <button type="reset" class="btn btn-secondary waves-effect">
                         Trở về

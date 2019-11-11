@@ -62,7 +62,7 @@ class LinhVucController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('cap-nhat-linh-vuc',['id'=>$id]);
     }
 
     /**
@@ -74,7 +74,8 @@ class LinhVucController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        LinhVuc::where('id',$id)->update(['ten_linh_vuc'=> $request->ten_linh_vuc]);
+        return \redirect()->route('linh-vuc.danh-sach');
     }
 
     /**
@@ -85,6 +86,8 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id_xoa = LinhVuc::find($id);
+        $id_xoa->delete();
+        return redirect()->route('linh-vuc.danh-sach');
     }
 }

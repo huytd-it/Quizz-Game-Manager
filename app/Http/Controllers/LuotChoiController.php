@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\LuotChoi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -25,7 +25,7 @@ class LuotChoiController extends Controller
      */
     public function create()
     {
-        //
+        return view('them-moi-luot-choi');
     }
 
     /**
@@ -36,7 +36,12 @@ class LuotChoiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dsLuotChoi = [ 'nguoi_choi_id'=>$request->nguoi_choi_id,
+                        'so_cau'=>$request->so_cau,
+                        'diem'=>$request->diem,
+                        'ngay_gio'=>$request->ngay_gio];
+        LuotChoi::create($dsLuotChoi);
+        return redirect()->route('luot-choi.danh-sach');
     }
 
     /**
@@ -58,7 +63,7 @@ class LuotChoiController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('cap-nhat-luot-choi',['id'=>$id]);
     }
 
     /**
@@ -70,7 +75,12 @@ class LuotChoiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dsLuotChoi = [ 'nguoi_choi_id'=>$request->nguoi_choi_id,
+                        'so_cau'=>$request->so_cau,
+                        'diem'=>$request->diem,
+                        'ngay_gio'=>$request->ngay_gio];
+        LuotChoi::where('id',$id)->update($dsLuotChoi);
+        return \redirect()->route('luot-choi.danh-sach');
     }
 
     /**
@@ -81,6 +91,8 @@ class LuotChoiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id_xoa = LuotChoi::find($id);
+        $id_xoa->delete();
+        return redirect()->route('luot-choi.danh-sach')->with(['message'=>'Xóa thành công']);
     }
 }

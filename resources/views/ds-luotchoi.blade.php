@@ -45,10 +45,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Danh sách lĩnh vực</h4>
+                                <h1 >DANH SÁCH LƯỢT CHƠI</h1>
                                 <p class="text-muted font-13 mb-4">
                                 </p>
-                                <a href="{{route('linh-vuc.them-moi')}}">
+                                <a href="{{route('luot-choi.them-moi')}}">
                                         <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
                                     </a>
                                 <h1></h1><br>
@@ -65,6 +65,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach($dsLuotChoi as $luotchoi)
+                                        @if($luotchoi->deleted_at == null)
                                         <tr>
                                             <td>{{$luotchoi->id}}</td>
                                             <td>{{$luotchoi->nguoi_choi_id}}</td>
@@ -72,11 +73,20 @@
                                             <td>{{$luotchoi->diem}}</td>
                                             <td>{{$luotchoi->ngay_gio}}</td>
                                             <td>
-                                                <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                                <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                <a href="{{ route('luot-choi.xoa',['id'=>$luotchoi->id]) }}">
+                                                    <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light">
+                                                        <i class="fe-delete"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="{{ route('luot-choi.chinh-sua',['id'=>$luotchoi->id])}}">
+                                                    <button type="button" class="btn btn-secondary btn-rounded waves-effect">
+                                                        <i class="fe-edit"></i>
+                                                    </button>
+                                                </a>
                                             </td>
 
                                         </tr>
+                                        @endif
                                         @endforeach
                                     </tbody>
                                 </table>

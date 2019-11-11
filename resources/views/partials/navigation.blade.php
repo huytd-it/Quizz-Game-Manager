@@ -402,7 +402,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('luot_choi')}}"> <i class="la la-briefcase"></i>Lượt chơi <div class="arrow-down"></div></a>
+                        <a href="{{route('luot-choi.danh-sach')}}"> <i class="la la-briefcase"></i>Lượt chơi <div class="arrow-down"></div></a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
