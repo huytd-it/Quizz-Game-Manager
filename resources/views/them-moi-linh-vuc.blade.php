@@ -34,7 +34,6 @@
 
             <form action="{{ route('linh-vuc.luu-tru') }}" method="POST" class="parsley-examples col-xl-6 ">
                 @csrf
-
                 <div class="form-group ">
                     <label for="ten_linh_vuc">Tên lĩnh vực<span class="text-danger">*</span></label>
                     <input type="text" name="ten_linh_vuc"  parsley-trigger="change" required

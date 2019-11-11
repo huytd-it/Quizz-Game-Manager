@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1 class="header-title">Danh Sách Câu Hỏi</h1>
-                                <a href="{{route('them_moi_cau_hoi')}}">
+                                <a href="{{route('cau_hoi.them_moi')}}">
                                 <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
                                 </a>
                                 <h1></h1><br>
@@ -62,7 +62,7 @@
                                             <td>{{$ch->dap_an}}</td>
                                             <td>
                                             <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                             <button href ="{{route('cau_hoi.xoa_cau_hoi',['id'=>$ch->id])}}" type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
                                             </td>
                                         </tr>
                                         @endforeach

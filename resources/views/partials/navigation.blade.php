@@ -444,7 +444,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('cau_hoi')}}">
+                        <a href="{{route('cau_hoi.ds_cau_hoi')}}">
                             <i class="la la-diamond"></i>Câu Hỏi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li class="has-submenu">
