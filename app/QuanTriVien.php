@@ -9,6 +9,8 @@ class QuanTriVien extends Authenticatable
 {
     protected $table = "quan_tri_vien";
 
+    protected $fillable = ['id','ten_dang_nhap','mat_khau','ho_ten'];
+
     public function getPasswordAttribute()
     {
         return $this->mat_khau;

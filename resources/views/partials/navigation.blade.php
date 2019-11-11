@@ -127,6 +127,7 @@
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <img src="{{ asset('images/users/user-1.jpg')}}" alt="user-image" class="rounded-circle">
                         <span class="pro-user-name ml-1">
+
                           <i class="mdi mdi-chevron-down"></i>
                         </span>
                     </a>
@@ -177,7 +178,7 @@
 
             <!-- LOGO -->
             <div class="logo-box">
-                <a href="index.html" class="logo text-center">
+                <a href="{{ route('trang-chu')}}" class="logo text-center">
                     <span class="logo-lg">
                         <img src="{{ asset('images/logo-dark.png')}}" alt="" height="26">
                         <!-- <span class="logo-lg-text-dark">Upvex</span> -->
@@ -444,8 +445,8 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('cau_hoi')}}">
-                            <i class="icon-question"></i>Câu Hỏi <div class="arrow-down"></div></a>
+                        <a href="{{route('cau_hoi.ds_cau_hoi')}}">
+                            <i class="la la-diamond"></i>Câu Hỏi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li class="has-submenu">
                                 <a href="#"><i class="fe-bookmark mr-1"></i> Forms <div class="arrow-down"></div></a>
@@ -664,7 +665,7 @@
 
                         </ul>
                     </li>
-            
+
 
                 </ul>
                 <!-- End navigation menu -->

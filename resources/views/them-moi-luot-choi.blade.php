@@ -29,7 +29,7 @@
 @section('main-content')
 <div class="row">
     <div class="col-lg-12 ">
-            <h2>THÊM LĨNH VỰC</h2>
+            <h2> THÊM LƯỢT CHƠI</h2>
         <div class="card-box row justify-content-center">
 
             <form action="{{ route('luot-choi.luu-tru') }}" method="POST" class="parsley-examples col-xl-6 ">

@@ -19,13 +19,15 @@ class QuanTriVienController extends Controller
 
         if(Auth::attempt(['ten_dang_nhap' => $ten_dang_nhap, 'password' => $mat_khau])){
             $user = $this->layThongTin();
-            return redirect()->route('trang-chu') ;
+            return \redirect()->route('trang-chu');
+
+
         }
         return redirect()->route('dang_nhap');
     }
     public function dangXuat(){
         Auth::logout();
-        return redirect()->route('dang-nhap');
+        return redirect()->route('dang_nhap');
     }
     public function layThongTin(){
         return Auth::user();

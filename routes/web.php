@@ -15,11 +15,13 @@
 */
 Route::get('/', 'QuanTriVienController@dangnhap')->name('dang_nhap');
 Route::post('/','QuanTriVienController@xulyDangNhap')->name('xy_ly_dang_nhap');
-Route::post('/dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
+Route::get('/dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
+
 Route::middleware('auth')->group(function(){
     Route::get('/trang-chu', function () {
         return view('layout');
     })->name('trang-chu');
+    //Phần lỉnh vực
     Route::prefix('/linh-vuc')->group(function(){
         Route::name('linh-vuc.')->group(function(){
             Route::get('/','LinhVucController@index')->name('danh-sach');
@@ -30,6 +32,7 @@ Route::middleware('auth')->group(function(){
             Route::get('{id}/xoa','LinhVucController@destroy')->name('xoa');
         });
     });
+    //Phần lượt chơi
     Route::prefix('/luot-choi')->group(function(){
         Route::name('luot-choi.')->group(function(){
             Route::get('/', 'LuotChoiController@index') ->name('danh-sach');
@@ -40,16 +43,19 @@ Route::middleware('auth')->group(function(){
             Route::get('{id}/xoa','LuotChoiController@destroy')->name('xoa');
         });
     });
+    //Phần câu hỏi
+    Route::prefix('/cau_hoi')->group(function(){
+        Route::name('cau_hoi.')->group(function(){
+            Route::get('/','CauHoiController@index')->name('ds_cau_hoi');
+            Route::get('/them_moi','CauHoiController@create')->name('them_moi');
+            Route::post('/luu_them_moi','CauHoiController@store')->name('luu_them_moi');
+            Route::get('/xoa','CauHoiController@destroy')->name('xoa_cau_hoi');
+        });
+    });
     Route::get('goi_credit', 'GoiCreditController@index')->name('goi_credit');
     Route::get('ds_lichsumuacredit','LichSuMuaCreditController@index')->name('ds_lichsumuacredit');
-    Route::get('/cau_hoi','CauHoiController@index')->name('cau_hoi');
     Route::get('/nguoi_choi','NguoiChoiController@index')->name('nguoi_choi');
-
 });
-
-Route::get('/them_cau_hoi',function(){
-    return view('them_cau_hoi');
-})->name('them_moi_cau_hoi');
 
 
 Auth::routes();

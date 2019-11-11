@@ -12,7 +12,10 @@ class ThemNguoiChoiSeeder extends Seeder
     public function run()
     {
         DB::table('nguoi_chois')->insert([
-            'ten_dang_nhap'=>'giangnho','mat_khau'=>'giang17081999','email'=>'giang01659187582@gmail.com','hinh_dai_dien'=>'giang.png','diem_cao_nhat'=>20,'credit'=>100
-        ]); 
+            ['ten_dang_nhap'=>'giangnho','mat_khau'=>'giang17081999','email'=>'giang01659187582@gmail.com','hinh_dai_dien'=>'giang.png','diem_cao_nhat'=>20,'credit'=>100],
+            ['ten_dang_nhap'=>'yukihuy','mat_khau'=>'yukihuy2141999','email'=>'giang01659187582@gmail.com','hinh_dai_dien'=>'giang.png','diem_cao_nhat'=>20,'credit'=>100],
+            ['ten_dang_nhap'=>'hungLOL','mat_khau'=>'giang17081999','email'=>'giang01659187582@gmail.com','hinh_dai_dien'=>'giang.png','diem_cao_nhat'=>20,'credit'=>100],
+            ['ten_dang_nhap'=>'LinhTinh','mat_khau'=>'giang17081999','email'=>'giang01659187582@gmail.com','hinh_dai_dien'=>'giang.png','diem_cao_nhat'=>20,'credit'=>100]
+        ]);
     }
 }
