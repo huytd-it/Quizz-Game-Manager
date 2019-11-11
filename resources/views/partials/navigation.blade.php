@@ -346,7 +346,7 @@
 
                     <li class="has-submenu">
                         <a href="{{route('linh-vuc.danh-sach')}}">
-                            <i class="la la-cube"></i>Lĩnh vực <div class="arrow-down"></div></a>
+                            <i class=" icon-layers"></i>Lĩnh vực <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
                                 <a href="apps-calendar.html">Calendar</a>
@@ -378,7 +378,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('goi_credit')}}"> <i class="la la-clone"></i>Danh sách Credit <div class="arrow-down"></div></a>
+                        <a href="{{route('goi_credit')}}"> <i class=" icon-screen-tablet"></i>Danh sách Credit <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
                                 <a href="layouts-topbar-dark.html">Topbar Dark</a>
@@ -402,7 +402,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('luot-choi.danh-sach')}}"> <i class="la la-briefcase"></i>Lượt chơi <div class="arrow-down"></div></a>
+                        <a href="{{route('luot-choi.danh-sach')}}"> <i class=" icon-game-controller"></i>Lượt chơi <div class="arrow-down"></div></a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
@@ -445,7 +445,7 @@
 
                     <li class="has-submenu">
                         <a href="{{route('cau_hoi')}}">
-                            <i class="la la-diamond"></i>Câu Hỏi <div class="arrow-down"></div></a>
+                            <i class="icon-question"></i>Câu Hỏi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li class="has-submenu">
                                 <a href="#"><i class="fe-bookmark mr-1"></i> Forms <div class="arrow-down"></div></a>
@@ -569,7 +569,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('nguoi_choi')}}"> <i class="la la-flask"></i>Người Chơi <div class="arrow-down"></div></a>
+                        <a href="{{route('nguoi_choi')}}"> <i class="icon-user"></i>Người Chơi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
                                 <a href="admin-widgets.html">Widgets</a>
@@ -596,7 +596,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('ds_lichsumuacredit')}}"> <i class="la la-file-text-o"></i>Lịch Sử Mua Credit <div class="arrow-down"></div></a>
+                        <a href="{{route('ds_lichsumuacredit')}}"> <i class="icon-book-open"></i>Lịch Sử Mua Credit <div class="arrow-down"></div></a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
@@ -664,75 +664,7 @@
 
                         </ul>
                     </li>
-                    <li class="has-submenu">
-                        <a href="#"> <i class="la la-file-text-o"></i>Pages <div class="arrow-down"></div></a>
-                        <ul class="submenu megamenu">
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="pages-starter.html">Starter</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-login.html">Log In</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-register.html">Register</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-recoverpw.html">Recover Password</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-lock-screen.html">Lock Screen</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-logout.html">Logout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="pages-confirm-mail.html">Confirm Mail</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-404.html">Error 404</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-404-alt.html">Error 404-alt</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-500.html">Error 500</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-profile.html">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-timeline.html">Timeline</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="extras-invoice.html">Invoice</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-faqs.html">FAQs</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-pricing.html">Pricing</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-maintenance.html">Maintenance</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-coming-soon.html">Coming Soon</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
+            
 
                 </ul>
                 <!-- End navigation menu -->
