@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\LuotChoi;
+use App\NguoiChoi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -25,7 +26,8 @@ class LuotChoiController extends Controller
      */
     public function create()
     {
-        return view('them-moi-luot-choi');
+        $dsNguoiChoi = NguoiChoi::all();
+        return view('them-moi-luot-choi',compact('dsNguoiChoi'));
     }
 
     /**

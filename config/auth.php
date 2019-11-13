@@ -46,7 +46,17 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'quan_tri_vien' => [
+            'driver' => 'session',
+            'provider' => 'quan_tri_vien',
+        ],
+
+        'quan_tri_vien-api' => [
+            'driver' => 'token',
+            'provider' => 'quan_tri_vien',
+        ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -95,6 +105,11 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'quan_tri_vien' => [
+            'provider' => 'quan_tri_vien',
             'table' => 'password_resets',
             'expire' => 60,
         ],

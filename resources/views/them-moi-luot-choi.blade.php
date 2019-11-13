@@ -38,9 +38,9 @@
                     <label for="ten_linh_vuc">Người chơi ID<span class="text-danger">*</span></label>
                     <select class="custom-select" name="nguoi_choi_id">
                             <option selected="">Open this select menu</option>
-                            <option value="1">Toán</option>
-                            <option value="2">Lý</option>
-                            <option value="3">Hóa</option>
+                            @foreach ($dsNguoiChoi as $item)
+                                <option value="{{ $item->id }}">{{$item->ten_dang_nhap}}</option>
+                            @endforeach
                     </select>
                 </div>
                     <div class="form-group ">

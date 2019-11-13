@@ -16,11 +16,11 @@
 Route::get('/', 'QuanTriVienController@dangnhap')->name('dang_nhap');
 Route::post('/','QuanTriVienController@xulyDangNhap')->name('xy_ly_dang_nhap');
 Route::get('/dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
+Route::get('/trang-chu', function () {
+    return view('layout');
+})->name('trang-chu')->middleware('checklogin::class');
+Route::middleware('checklogin')->group(function(){
 
-Route::middleware('auth')->group(function(){
-    Route::get('/trang-chu', function () {
-        return view('layout');
-    })->name('trang-chu');
     //Phần lỉnh vực
     Route::prefix('/linh-vuc')->group(function(){
         Route::name('linh-vuc.')->group(function(){

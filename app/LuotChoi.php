@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class LuotChoi extends Model
 {
-
+    use SoftDeletes;
     protected $table = 'luot_chois';
     protected $fillable = [  'id',
                             'nguoi_choi_id',
