@@ -40,7 +40,6 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>TÊN ĐĂNG NHẬP</th>
-                                            <th>MẬT KHẨU</th>
                                             <th>EMAIL</th>
                                             <th>HINH ĐẠI DIỆN</th>
                                             <th>ĐIỂM CAO NHẤT</th>
@@ -54,7 +53,6 @@
                                         <tr>
                                             <td>{{$nc->id}}</td>
                                             <td>{{$nc->ten_dang_nhap}}</td>
-                                            <td>{{$nc->mat_khau}}</td>
                                             <td>{{$nc->email}}</td>
                                             <td>{{$nc->hinh_dai_dien}}</td>
                                             <td>{{$nc->diem_cao_nhat}}</td>

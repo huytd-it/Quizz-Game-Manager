@@ -20,7 +20,6 @@ Route::get('/trang-chu', function () {
     return view('layout');
 })->name('trang-chu')->middleware('checklogin::class');
 Route::middleware('checklogin')->group(function(){
-
     //Phần lỉnh vực
     Route::prefix('/linh-vuc')->group(function(){
         Route::name('linh-vuc.')->group(function(){
@@ -61,7 +60,19 @@ Route::middleware('checklogin')->group(function(){
             Route::get('{id}/xoa_nguoi_choi','NguoiChoiController@destroy')->name('xoa_nguoi_choi');
         });
     });
-    Route::get('goi_credit', 'GoiCreditController@index')->name('goi_credit');
+    //Phần gói credit
+    Route::prefix('/goi_credit')->group(function(){
+        Route::name('goi_credit.')->group(function(){
+            Route::get('/','GoiCreditController@index')->name('danh-sach');
+            Route::get('/them-moi','GoiCreditController@create')->name('them-moi');
+            Route::post('/luu-tru','GoiCreditController@store')->name('luu-tru');
+            Route::get('{id}/chinh-sua','GoiCreditController@edit')->name('chinh-sua');
+            Route::post('{id}/cap-nhat','GoiCreditController@update')->name('cap-nhat');
+            Route::get('{id}/xoa','GoiCreditController@destroy')->name('xoa');
+        });
+    });
+
+
     Route::get('ds_lichsumuacredit','LichSuMuaCreditController@index')->name('ds_lichsumuacredit');
 
 });

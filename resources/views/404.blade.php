@@ -37,7 +37,7 @@
                                         it happens to the best of us. You might want to check your internet connection.
                                         Here's a little tip that might help you get back on track.</p>
 
-                                    <a class="btn btn-info mt-3" href="index.html"><i class="mdi mdi-reply mr-1"></i> Return Home</a>
+                                    <a class="btn btn-info mt-3" href="{{ route('dang_nhap') }}"><i class="mdi mdi-reply mr-1"></i> Return Home</a>
                                 </div>
 
                             </div> <!-- end card-body -->
