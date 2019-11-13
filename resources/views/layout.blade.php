@@ -35,14 +35,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <div class="page-title-right">
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Upvex</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
-                                    <li class="breadcrumb-item active">Starter</li>
-                                </ol>
-                            </div>
-                            @yield('title')
+                            
+                            @yield('title')    
                         </div>
                     </div>
                 </div>
@@ -52,7 +46,6 @@
             </div> <!-- end container -->
         </div>
         <!-- end wrapper -->
-
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->

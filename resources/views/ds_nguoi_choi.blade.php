@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <h1 class="header-title">Danh Sách Người Chơi</h1>
                                 <a href="{{route('linh-vuc.them-moi')}}">
-                                <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
+                               
                                 </a>
                                 <h1></h1><br>
                                 <table id="basic-datatable" class="table dt-responsive nowrap">

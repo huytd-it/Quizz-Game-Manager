@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1 class="header-title">Danh sách gói credit</h1>
-                                <a href="{{route('linh-vuc.them-moi')}}">
+                                <a href="{{route('goi_credit.them-moi')}}">
                                 <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
                                 </a>
                                 <h1></h1><br>
@@ -53,8 +53,8 @@
                                             <td>{{$goi->credit}}</td>
                                             <td>{{$goi->so_tien}}</td>
                                             <td>
-                                            <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                            <a href="{{ route('goi_credit.xoa',['id'=>$goi->id])}}"> <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button></a>
+                                            <a href="{{ route('goi_credit.chinh-sua',['id'=>$goi->id])}}"><button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button></a>
                                             </td>
                                         </tr>
                                         @endforeach

@@ -26,15 +26,13 @@
         <script src="{{asset('js/pages/datatables.init.js')}}"></script>
 @endsection
 @section('main-content')
+@section('title')
+    <h4 class='page-title'><b>Danh Sách Mua Gói Credit</b></h4>
+@endsection
 <div class="row justify-content-center">
                     <div class="col-lg-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <h1 class="header-title">Danh sách mua gói credit</h1>
-                                <a href="{{route('linh-vuc.them-moi')}}">
-                                <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
-                                </a>
-                                <h1></h1><br>
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
                                     <thead>
                                         <tr>
@@ -43,7 +41,6 @@
                                             <th>GOI_CREDIT</th>
                                             <th>CREDIT</th>
                                             <th>SO_TIEN</th>
-                                            <th>xóa/Sữa</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -54,10 +51,7 @@
                                             <td>{{$ds->goi_credit_id}}</td>
                                             <td>{{$ds->credit}}</td>
                                             <td>{{$ds->so_tien}}</td>
-                                            <td>
-                                            <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
-                                            </td>
+                                           
                                         </tr>
                                         @endforeach
                                     </tbody>

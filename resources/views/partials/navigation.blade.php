@@ -32,97 +32,7 @@
                     </form>
                 </li>
 
-                <li class="dropdown notification-list">
-                    <a class="nav-link dropdown-toggle  waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <i class="fe-bell noti-icon"></i>
-                        <span class="badge badge-danger rounded-circle noti-icon-badge">5</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
-
-                        <!-- item-->
-                        <div class="dropdown-item noti-title">
-                            <h5 class="m-0">
-                                <span class="float-right">
-                                    <a href="" class="text-muted">
-                                        <small>Clear All</small>
-                                    </a>
-                                </span>Notification
-                            </h5>
-                        </div>
-
-                        <div class="slimscroll noti-scroll">
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                <div class="notify-icon">
-                                    <img src="{{ asset('images/users/user-1.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
-                                <p class="notify-details">Cristina Pride</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Hi, How are you? What about our next meeting</small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="notify-icon bg-primary">
-                                    <i class="mdi mdi-comment-account-outline"></i>
-                                </div>
-                                <p class="notify-details">Caleb Flakelar commented on Admin
-                                    <small class="text-muted">1 min ago</small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="notify-icon">
-                                    <img src="{{ asset('images/users/user-4.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
-                                <p class="notify-details">Karen Robinson</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Wow ! this admin looks good and awesome design</small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="notify-icon bg-warning">
-                                    <i class="mdi mdi-account-plus"></i>
-                                </div>
-                                <p class="notify-details">New user registered.
-                                    <small class="text-muted">5 hours ago</small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="notify-icon bg-info">
-                                    <i class="mdi mdi-comment-account-outline"></i>
-                                </div>
-                                <p class="notify-details">Caleb Flakelar commented on Admin
-                                    <small class="text-muted">4 days ago</small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <div class="notify-icon bg-secondary">
-                                    <i class="mdi mdi-heart"></i>
-                                </div>
-                                <p class="notify-details">Carlos Crouch liked
-                                    <b>Admin</b>
-                                    <small class="text-muted">13 days ago</small>
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- All-->
-                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-                            View all
-                            <i class="fi-arrow-right"></i>
-                        </a>
-
-                    </div>
-                </li>
-
+              <!--chuong thong bao doan code lưu tại word ngoài destop-->
                 <li class="dropdown notification-list">
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <img src="{{ asset('images/users/user-1.jpg')}}" alt="user-image" class="rounded-circle">
@@ -333,7 +243,7 @@
 
                     <li class="has-submenu">
                         <a href="{{route('linh-vuc.danh-sach')}}">
-                            <i class="la la-dashboard"></i>Dashboards <div class="arrow-down"></div></a>
+                            <!--<i class="la la-dashboard"></i>-->Dashboards <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
                                 <a href="index.html">Dashboard 1</a>
@@ -346,394 +256,73 @@
 
                     <li class="has-submenu">
                         <a href="{{route('linh-vuc.danh-sach')}}">
-                            <i class="la la-cube"></i>Lĩnh vực <div class="arrow-down"></div></a>
+                            <!--<i class="la la-cube"></i>-->Lĩnh vực <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
-                                <a href="apps-calendar.html">Calendar</a>
+                                <a href="{{route('linh-vuc.danh-sach')}}">Danh Sách Lĩnh Vực</a>
                             </li>
                             <li>
-                                <a href="apps-contacts.html">Contacts</a>
-                            </li>
-                            <li>
-                                <a href="apps-tickets.html">Tickets</a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#">Email <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="email-inbox.html">Inbox</a>
-                                    </li>
-                                    <li>
-                                        <a href="email-read.html">Read Email</a>
-                                    </li>
-                                    <li>
-                                        <a href="email-compose.html">Compose Email</a>
-                                    </li>
-                                    <li>
-                                        <a href="email-templates.html">Email Templates</a>
-                                    </li>
-                                </ul>
+                                <a href="{{route('linh-vuc.them-moi')}}">Thêm Lĩnh Vực</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('goi_credit')}}"> <i class="la la-clone"></i>Danh sách Credit <div class="arrow-down"></div></a>
+                        <a href="{{route('goi_credit.danh-sach')}}"><!-- <i class="la la-clone"></i>-->Danh sách Credit <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
-                                <a href="layouts-topbar-dark.html">Topbar Dark</a>
+                                <a href="{{route('goi_credit.danh-sach')}}">Danh Sách Credit</a>
                             </li>
                             <li>
-                                <a href="layouts-menubar-light.html">Menubar Light</a>
-                            </li>
-                            <li>
-                                <a href="layouts-center-menu.html">Center Menu</a>
-                            </li>
-                            <li>
-                                <a href="layouts-preloader.html">Preloader</a>
-                            </li>
-                            <li>
-                                <a href="layouts-normal-header.html">Unsticky Header</a>
-                            </li>
-                            <li>
-                                <a href="layouts-boxed.html">Boxed</a>
+                                <a href="{{route('goi_credit.them-moi')}}">Thêm Gói Credit</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('luot_choi')}}"> <i class="la la-briefcase"></i>Lượt chơi <div class="arrow-down"></div></a>
-                        <ul class="submenu megamenu">
+                        <a href="{{route('luot_choi')}}"> <!--<i class="la la-briefcase"></i>-->Lượt chơi <div class="arrow-down"></div></a>
+                        <ul class="submenu">
                             <li>
-                                <ul>
-                                    <li>
-                                        <a href="ui-buttons.html">Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-cards.html">Cards</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-tabs-accordions.html">Tabs & Accordions</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-modals.html">Modals</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-progress.html">Progress</a>
-                                    </li>
-                                </ul>
+                                <a href="{{route('luot_choi')}}">Danh Sách Lượt Chơi</a>
                             </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="ui-notifications.html">Notifications</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-general.html">General UI</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-typography.html">Typography</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-grid.html">Grid</a>
-                                    </li>
-                                </ul>
-                            </li>
-
                         </ul>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{route('cau_hoi')}}">
-                            <i class="la la-diamond"></i>Câu Hỏi <div class="arrow-down"></div></a>
+                            <!--<i class="la la-diamond"></i>-->Câu Hỏi <div class="arrow-down"></div></a>
                         <ul class="submenu">
-                            <li class="has-submenu">
-                                <a href="#"><i class="fe-bookmark mr-1"></i> Forms <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="forms-elements.html">General Elements</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-advanced.html">Advanced</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-validation.html">Validation</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-pickers.html">Pickers</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-wizard.html">Wizard</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-masks.html">Masks</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-summernote.html">Summernote</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-quilljs.html">Quilljs Editor</a>
-                                    </li>
-                                    <li>
-                                        <a href="forms-file-uploads.html">File Uploads</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="{{route('cau_hoi')}}">Danh Sách Câu Hỏi</a>
                             </li>
-                            <li class="has-submenu">
-                                <a href="#"><i class="fe-grid mr-1"></i> Tables <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="tables-basic.html">Basic Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="tables-datatables.html">Data Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="tables-editable.html">Editable Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="tables-responsive.html">Responsive Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="tables-tablesaw.html">Tablesaw Tables</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#"><i class="fe-bar-chart-2 mr-1"></i> Charts <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="charts-apex.html">Apex Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-flot.html">Flot Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-morris.html">Morris Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-chartjs.html">Chartjs Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-brite.html">Brite Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-chartist.html">Chartist Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-peity.html">Peity Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-sparklines.html">Sparklines Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-knob.html">Jquery Knob Charts</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#"><i class="fe-cpu mr-1"></i> Icons <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="icons-feather.html">Feather Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons-lineawesome.html">Line Awesome</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons-mdi.html">Material Design Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons-font-awesome.html">Font Awesome</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons-simple-line.html">Simple Line</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#"><i class="fe-map mr-1"></i> Maps <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="maps-google.html">Google Maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="maps-vector.html">Vector Maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="maps-mapael.html">Mapael Maps</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="{{route('them_moi_cau_hoi')}}">Thêm Câu Hỏi</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('nguoi_choi')}}"> <i class="la la-flask"></i>Người Chơi <div class="arrow-down"></div></a>
+                        <a href="{{route('nguoi_choi')}}"> <!--<i class="la la-flask"></i>-->Người Chơi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
-                                <a href="admin-widgets.html">Widgets</a>
-                            </li>
-                            <li>
-                                <a href="admin-sweet-alert.html">Sweet Alert</a>
-                            </li>
-                            <li>
-                                <a href="admin-nestable.html">Nestable List</a>
-                            </li>
-                            <li>
-                                <a href="admin-range-slider.html">Range Slider</a>
-                            </li>
-                            <li>
-                                <a href="admin-tour.html">Tour Page</a>
-                            </li>
-                            <li>
-                                <a href="admin-lightbox.html">Lightbox</a>
-                            </li>
-                            <li>
-                                <a href="admin-treeview.html">Treeview</a>
+                                <a href="{{route('nguoi_choi')}}">Danh Sách Người Chơi</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('ds_lichsumuacredit')}}"> <i class="la la-file-text-o"></i>Lịch Sử Mua Credit <div class="arrow-down"></div></a>
+                        <a href="{{route('ds_lichsumuacredit')}}"> <!--<i class="la la-file-text-o"></i>--> Lịch Sử Mua Credit <div class="arrow-down"></div></a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
                                     <li>
-                                        <a href="pages-starter.html">Starter</a>
+                                        <a href="{{route('ds_lichsumuacredit')}}">Danh Sách Mua Credit</a>
                                     </li>
-                                    <li>
-                                        <a href="pages-login.html">Log In</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-register.html">Register</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-recoverpw.html">Recover Password</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-lock-screen.html">Lock Screen</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-logout.html">Logout</a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="pages-confirm-mail.html">Confirm Mail</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-404.html">Error 404</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-404-alt.html">Error 404-alt</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-500.html">Error 500</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-profile.html">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-timeline.html">Timeline</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="extras-invoice.html">Invoice</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-faqs.html">FAQs</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-pricing.html">Pricing</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-maintenance.html">Maintenance</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-coming-soon.html">Coming Soon</a>
-                                    </li>
-                                </ul>
-                            </li>
-
                         </ul>
                     </li>
-                    <li class="has-submenu">
-                        <a href="#"> <i class="la la-file-text-o"></i>Pages <div class="arrow-down"></div></a>
-                        <ul class="submenu megamenu">
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="pages-starter.html">Starter</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-login.html">Log In</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-register.html">Register</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-recoverpw.html">Recover Password</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-lock-screen.html">Lock Screen</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-logout.html">Logout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="pages-confirm-mail.html">Confirm Mail</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-404.html">Error 404</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-404-alt.html">Error 404-alt</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-500.html">Error 500</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-profile.html">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-timeline.html">Timeline</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="extras-invoice.html">Invoice</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-faqs.html">FAQs</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-pricing.html">Pricing</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-maintenance.html">Maintenance</a>
-                                    </li>
-                                    <li>
-                                        <a href="extras-coming-soon.html">Coming Soon</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
-
                 </ul>
                 <!-- End navigation menu -->
 

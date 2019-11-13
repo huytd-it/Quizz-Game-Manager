@@ -15,7 +15,7 @@
 */
 Route::get('/', 'QuanTriVienController@dangnhap')->name('dang_nhap');
 Route::post('/','QuanTriVienController@xulyDangNhap')->name('xy_ly_dang_nhap');
-Route::post('/dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
+Route::get('/dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
 Route::middleware('auth')->group(function(){
     Route::get('/trang-chu', function () {
         return view('layout');
@@ -30,7 +30,17 @@ Route::middleware('auth')->group(function(){
 
         });
     });
-    Route::get('goi_credit', 'GoiCreditController@index')->name('goi_credit');
+    Route::prefix('/goi_credit')->group(function(){
+        Route::name('goi_credit.')->group(function(){
+            Route::get('/','GoiCreditController@index')->name('danh-sach');
+            Route::get('/them-moi','GoiCreditController@create')->name('them-moi');
+            Route::post('/luu-tru','GoiCreditController@store')->name('luu-tru');
+            Route::get('{id}/chinh-sua','GoiCreditController@edit')->name('chinh-sua');
+            Route::post('{id}/cap-nhat','GoiCreditController@update')->name('cap-nhat');
+            Route::get('{id}/xoa','GoiCreditController@destroy')->name('xoa');
+        });
+    });
+
     Route::get('luot_choi', 'LuotChoiController@index') ->name('luot_choi');
     Route::get('ds_lichsumuacredit','LichSuMuaCreditController@index')->name('ds_lichsumuacredit');
 

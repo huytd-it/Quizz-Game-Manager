@@ -25,7 +25,7 @@ class QuanTriVienController extends Controller
     }
     public function dangXuat(){
         Auth::logout();
-        return redirect()->route('dang-nhap');
+        return redirect()->route('dang_nhap');
     }
     public function layThongTin(){
         return Auth::user();

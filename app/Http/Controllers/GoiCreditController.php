@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\GoiCredit;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -25,7 +27,7 @@ class GoiCreditController extends Controller
      */
     public function create()
     {
-        //
+        return view('them-moi-goi-credit');
     }
 
     /**
@@ -36,7 +38,12 @@ class GoiCreditController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $goiCredit=new GoiCredit();
+        $goiCredit->ten_goi=$request->ten_goi_credit;
+        $goiCredit->credit=$request->so_credit;
+        $goiCredit->so_tien=$request->so_tien;
+        $goiCredit->save();
+        return redirect()->route('goi_credit.danh-sach');
     }
 
     /**
@@ -58,7 +65,7 @@ class GoiCreditController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('cap-nhat-goi-credit',['id'=>$id]);
     }
 
     /**
@@ -70,7 +77,11 @@ class GoiCreditController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        GoiCredit::where('id',$id)->update(['ten_goi'=> $request->ten_goi_credit,
+                                         'credit'=>$request->so_credit,
+                                         'so_tien'=>$request->so_tien
+        ]);
+        return redirect()->route('goi_credit.danh-sach');
     }
 
     /**
@@ -81,6 +92,8 @@ class GoiCreditController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id_xoa = GoiCredit::find($id);
+        $id_xoa->delete();
+        return redirect()->route('goi_credit.danh-sach');
     }
 }
