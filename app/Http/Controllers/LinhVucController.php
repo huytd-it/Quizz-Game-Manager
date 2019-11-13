@@ -39,7 +39,7 @@ class LinhVucController extends Controller
         $linhvuc = new LinhVuc();
         $linhvuc->ten_linh_vuc = $request->ten_linh_vuc;
         $linhvuc->save();
-        return redirect()->route('linh-vuc.them-moi');
+        return redirect()->route('linh-vuc.danh-sach');
 
     }
 
