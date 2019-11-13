@@ -51,6 +51,7 @@
                                     </thead>
                                     <tbody>
                                        @foreach($cauHoi as $ch)
+                                        @if($ch->deleted_at == null)
                                         <tr>
                                             <td>{{$ch->id}}</td>
                                             <td>{{$ch->noi_dung}}</td>
@@ -61,10 +62,13 @@
                                             <td>{{$ch->phuong_an_D}}</td>
                                             <td>{{$ch->dap_an}}</td>
                                             <td>
-                                            <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                             <button href ="{{route('cau_hoi.xoa_cau_hoi',['id'=>$ch->id])}}" type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                <a href="{{route('cau_hoi.xoa_cau_hoi',['id'=>$ch->id])}}">
+                                            <button  type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
+                                                </a>
+                                             <button href ="" type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
                                             </td>
                                         </tr>
+                                        @endif
                                         @endforeach
                                     </tbody>
 

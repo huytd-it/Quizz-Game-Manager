@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\NguoiChoi;
 use Illuminate\Support\Facades\DB;
 
 class NguoiChoiController extends Controller
@@ -25,7 +26,7 @@ class NguoiChoiController extends Controller
      */
     public function create()
     {
-        //
+        return view('them_nguoi_choi');
     }
 
     /**
@@ -36,7 +37,22 @@ class NguoiChoiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nguoiChoi = new NguoiChoi();
+
+        $nguoiChoi->ten_dang_nhap = $request->ten_dang_nhap;
+        $nguoiChoi->mat_khau = $request->mat_khau;
+        $nguoiChoi->email = $request->email;
+
+        $file = $request->hinh_dai_dien;
+        $filename = $file->getClientOriginalName();
+        $file->move('/images',$filename);
+        $nguoiChoi->hinh_dai_dien = $filename;
+
+        $nguoiChoi->diem_cao_nhat = $request->diem;
+        $nguoiChoi->credit = $request->credit;
+        $nguoiChoi->save();
+        return redirect()->route('nguoi_choi.ds_nguoi_choi');
+
     }
 
     /**
@@ -81,6 +97,8 @@ class NguoiChoiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id = NguoiChoi::find($id);
+        $id->delete();
+        return redirect()->route('nguoi_choi.ds_nguoi_choi');
     }
 }

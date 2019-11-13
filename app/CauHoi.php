@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CauHoi extends Model
 {
@@ -19,4 +20,7 @@ class CauHoi extends Model
         'dap_an'=>$data['dap_an'],
         ]);
     }
+    use SoftDeletes;
+    
+    protected $delete =["deleted_at"];
 }

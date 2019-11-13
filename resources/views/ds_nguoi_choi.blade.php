@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h1 class="header-title">Danh Sách Người Chơi</h1>
-                                <a href="{{route('linh-vuc.them-moi')}}">
+                                <a href="{{route('nguoi_choi.them_moi_nguoi_choi')}}">
                                 <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
                                 </a>
                                 <h1></h1><br>
@@ -50,6 +50,7 @@
                                     </thead>
                                     <tbody>
                                        @foreach($nguoiChoi as $nc)
+                                       @if($nc->deleted_at==null)
                                         <tr>
                                             <td>{{$nc->id}}</td>
                                             <td>{{$nc->ten_dang_nhap}}</td>
@@ -59,10 +60,13 @@
                                             <td>{{$nc->diem_cao_nhat}}</td>
                                             <td>{{$nc->credit}}</td>
                                             <td>
-                                            <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                <a href="{{route('nguoi_choi.xoa_nguoi_choi',['id'=>$nc->id])}}" >
+                                                    <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
+                                                </a>
+                                             <button  type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
                                             </td>
                                         </tr>
+                                        @endif
                                         @endforeach
                                     </tbody>
 

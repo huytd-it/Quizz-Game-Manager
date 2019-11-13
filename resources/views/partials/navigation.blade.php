@@ -570,7 +570,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{route('nguoi_choi')}}"> <i class="icon-user"></i>Người Chơi <div class="arrow-down"></div></a>
+                        <a href="{{route('nguoi_choi.ds_nguoi_choi')}}"> <i class="icon-user"></i>Người Chơi <div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
                                 <a href="admin-widgets.html">Widgets</a>
