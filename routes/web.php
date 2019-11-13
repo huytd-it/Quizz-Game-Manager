@@ -49,12 +49,21 @@ Route::middleware('auth')->group(function(){
             Route::get('/','CauHoiController@index')->name('ds_cau_hoi');
             Route::get('/them_moi','CauHoiController@create')->name('them_moi');
             Route::post('/luu_them_moi','CauHoiController@store')->name('luu_them_moi');
-            Route::get('/xoa','CauHoiController@destroy')->name('xoa_cau_hoi');
+            Route::get('{id}/xoa','CauHoiController@destroy')->name('xoa_cau_hoi');
+        });
+    });
+    //Phân người chơi
+    Route::prefix('/nguoi_choi')->group(function(){
+        Route::name('nguoi_choi.')->group(function(){
+            Route::get('/','NguoiChoiController@index')->name('ds_nguoi_choi');
+            Route::get('/them_moi_nguoi_choi','NguoiChoiController@create')->name('them_moi_nguoi_choi');
+            Route::post('/luu_tru_nguoi_choi','NguoiChoiController@store')->name('luu_tru_nguoi_choi');
+            Route::get('{id}/xoa_nguoi_choi','NguoiChoiController@destroy')->name('xoa_nguoi_choi');
         });
     });
     Route::get('goi_credit', 'GoiCreditController@index')->name('goi_credit');
     Route::get('ds_lichsumuacredit','LichSuMuaCreditController@index')->name('ds_lichsumuacredit');
-    Route::get('/nguoi_choi','NguoiChoiController@index')->name('nguoi_choi');
+
 });
 
 
