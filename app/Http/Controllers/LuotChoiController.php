@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\LuotChoi;
 use App\NguoiChoi;
+use App\ChiTietLuotChoi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,8 +16,17 @@ class LuotChoiController extends Controller
      */
     public function index()
     {
-        $dsLuotChoi = DB::table('luot_chois')->get();
-        return view('ds-luotchoi',compact('dsLuotChoi')) ;
+        $chiTiet = DB::table('chi_tiet_luot_chois')
+        ->join('luot_chois','luot_chois.id','=','chi_tiet_luot_chois.luoc_choi_id')
+        ->join('cau_hois','cau_hois.id','=','chi_tiet_luot_chois.cau_hoi_id')
+        ->select('chi_tiet_luot_chois.*','cau_hois.noi_dung')->get();
+        $dsLuotChoi = DB::table('luot_chois')
+        ->join('nguoi_chois','nguoi_chois.id','=','luot_chois.nguoi_choi_id')
+        ->select('luot_chois.*','nguoi_chois.ten_dang_nhap')
+        ->get();
+        return view('ds-luotchoi',compact('dsLuotChoi','chiTiet')) ;
+        //return $chiTiet;
+
     }
 
     /**

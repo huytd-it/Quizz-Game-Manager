@@ -17,6 +17,11 @@ class LinhVucController extends Controller
         $dslinhvuc = DB::table('linh_vuc')->get();
         return view('ds-linhvuc',compact('dslinhvuc'));
     }
+    public function recycle()
+    {
+        $dslinhvuc = DB::table('linh_vuc')->get();
+        return view('linhvuc_thungrac',compact('dslinhvuc'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -62,7 +67,8 @@ class LinhVucController extends Controller
      */
     public function edit($id)
     {
-        return view('cap-nhat-linh-vuc',['id'=>$id]);
+        $lv = LinhVuc::find($id);
+        return view('cap-nhat-linh-vuc',compact('lv'),['id'=>$id]);
     }
 
     /**
@@ -89,5 +95,10 @@ class LinhVucController extends Controller
         $id_xoa = LinhVuc::find($id);
         $id_xoa->delete();
         return redirect()->route('linh-vuc.danh-sach');
+    }
+    public function restore($id)
+    {
+         LinhVuc::withTrashed()->find($id)->restore();
+        return  \redirect()->route('linh-vuc.danh-sach');
     }
 }

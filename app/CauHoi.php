@@ -21,6 +21,13 @@ class CauHoi extends Model
         ]);
     }
     use SoftDeletes;
-    
+
     protected $delete =["deleted_at"];
+    //Thêm fillable cho bảng Câu hỏi
+    protected $fillable = ['noi_dung',
+    'id_linh_vuc','phuong_an_A',
+    'phuong_an_B','phuong_an_C',
+    'phuong_an_D',
+    'dap_an','trang_thai'];
+
 }
