@@ -37,7 +37,7 @@
 
                 <div class="form-group ">
                     <label for="ten_linh_vuc">Tên lĩnh vực<span class="text-danger">*</span></label>
-                    <input type="text" name="ten_linh_vuc"  parsley-trigger="change" required
+                    <input type="text" value="{{ $lv->ten_linh_vuc }}" name="ten_linh_vuc"  parsley-trigger="change" required
                            placeholder="Nhập tên lĩnh vực" class="form-control" id="ten_linh_vuc">
                 </div>
                 <div class="form-group text-right mb-0">

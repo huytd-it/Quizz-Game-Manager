@@ -45,14 +45,11 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h2>Danh sách lĩnh vực</h2>
+                                <h4 class="header-title">Danh sách lĩnh vực</h4>
                                 <p class="text-muted font-13 mb-4">
                                 </p>
                                 <a href="{{route('linh-vuc.them-moi')}}">
                                         <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
-                                    </a>
-                                    <a href="{{route('linh-vuc.thung-rac')}}">
-                                        <button  type="button" class="btn btn-rounded btn btn-purple waves-effect waves-light"><i class="fe-trash-2"></i></button>
                                     </a>
                                 <h1></h1><br>
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
@@ -60,18 +57,20 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Tên lĩnh vực</th>
-                                            <th>Xóa/Sữa</th>
+                                            <th>Restore</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($dslinhvuc as $linhvuc)
-                                        @if($linhvuc->deleted_at == null)
+                                        @if($linhvuc->deleted_at != null)
                                         <tr>
                                             <td>{{$linhvuc->id}}</td>
                                             <td>{{$linhvuc->ten_linh_vuc}}</td>
                                             <td>
-                                                <a href="{{ route('linh-vuc.xoa',['id'=>$linhvuc->id])}}"><button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button></a>
-                                                <a href="{{ route('linh-vuc.chinh-sua',['id'=>$linhvuc->id] ) }}"><button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button></a>
+                                                <a href="{{ route('linh-vuc.khoi-phuc',['id'=>$linhvuc->id])}}">
+                                                    <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light">
+                                                        <i class="fe-rotate-ccw">
+                                                </i></button></a>
                                             </td>
 
                                         </tr>

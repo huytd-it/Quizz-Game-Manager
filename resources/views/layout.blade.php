@@ -21,6 +21,11 @@
     </head>
 
     <body>
+            <style>
+                    *{
+                        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+                </style>
 
         @include('partials.navigation')
 
@@ -35,8 +40,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            
-                            @yield('title')    
+
+                            @yield('title')
                         </div>
                     </div>
                 </div>

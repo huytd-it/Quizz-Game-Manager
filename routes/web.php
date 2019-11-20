@@ -23,15 +23,17 @@ Route::get('/trang-chu', function () {
     return view('trang-chu');
 })->name('trang-chu')->middleware('checklogin::class');
 Route::middleware('checklogin')->group(function(){
-    //Phần lỉnh vực
+    //Phần lĩnh vực
     Route::prefix('/linh-vuc')->group(function(){
         Route::name('linh-vuc.')->group(function(){
             Route::get('/','LinhVucController@index')->name('danh-sach');
+            Route::get('/thung-rac','LinhVucController@recycle')->name('thung-rac');
             Route::get('/them-moi','LinhVucController@create')->name('them-moi');
             Route::post('/luu-tru','LinhVucController@store')->name('luu-tru');
             Route::get('{id}/chinh-sua','LinhVucController@edit')->name('chinh-sua');
             Route::post('{id}/cap-nhat','LinhVucController@update')->name('cap-nhat');
             Route::get('{id}/xoa','LinhVucController@destroy')->name('xoa');
+            Route::get('{id}/khoi-phuc','LinhVucController@restore')->name('khoi-phuc');
         });
     });
     //Phần lượt chơi
