@@ -13,6 +13,9 @@
     return view('layout');
 })->name('dashboard');
 */
+
+use App\Http\Controllers\CauHoiController;
+
 Route::get('/', 'QuanTriVienController@dangnhap')->name('dang_nhap');
 Route::post('/','QuanTriVienController@xulyDangNhap')->name('xy_ly_dang_nhap');
 Route::get('/dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
@@ -49,6 +52,8 @@ Route::middleware('checklogin')->group(function(){
             Route::get('/them_moi','CauHoiController@create')->name('them_moi');
             Route::post('/luu_them_moi','CauHoiController@store')->name('luu_them_moi');
             Route::get('{id}/xoa','CauHoiController@destroy')->name('xoa_cau_hoi');
+            Route::post('{id}/cap_nhat','CauHoiController@update')->name('cap_nhat_cau_hoi');
+            Route::get('{id}/hien_thi_sua','CauHoiController@edit')->name('hien_thi_view_cap_nhat');
         });
     });
     //Phân người chơi

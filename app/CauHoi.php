@@ -21,6 +21,8 @@ class CauHoi extends Model
         ]);
     }
     use SoftDeletes;
-    
+
     protected $delete =["deleted_at"];
+
+    protected $fieldable =['id','noi_dung','id_linh_vuc','phuong_an_A','phuong_an_B','phuong_an_C','phuong_an_D','dap_an'];
 }

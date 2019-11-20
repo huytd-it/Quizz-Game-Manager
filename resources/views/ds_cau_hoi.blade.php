@@ -65,7 +65,9 @@
                                                 <a href="{{route('cau_hoi.xoa_cau_hoi',['id'=>$ch->id])}}">
                                             <button  type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
                                                 </a>
-                                             <button href ="" type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                <a href="{{route('cau_hoi.hien_thi_view_cap_nhat',['id'=>$ch->id])}}">
+                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                </a>
                                             </td>
                                         </tr>
                                         @endif
