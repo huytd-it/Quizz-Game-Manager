@@ -29,14 +29,22 @@
 @section('main-content')
 <div class="row">
     <div class="col-lg-12 ">
-
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li>{{$error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="card-box row justify-content-center">
             <h2 class="header-title ">Thêm lĩnh vực</h2>
             <form action="{{ route('linh-vuc.luu-tru') }}" method="POST" class="parsley-examples col-xl-6 ">
                 @csrf
                 <div class="form-group ">
                     <label for="ten_linh_vuc">Tên lĩnh vực<span class="text-danger">*</span></label>
-                    <input type="text" name="ten_linh_vuc"  parsley-trigger="change" required
+                    <input type="text" name="ten_linh_vuc"  parsley-trigger="change"
                            placeholder="Nhập tên lĩnh vực" class="form-control" id="ten_linh_vuc">
                 </div>
                 <div class="form-group text-right mb-0">

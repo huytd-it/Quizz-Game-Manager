@@ -83,9 +83,9 @@
                                 <h2>Danh sách lượt chơi</h2>
                                 <p class="text-muted font-13 mb-4">
                                 </p>
-                                <a href="{{route('luot-choi.them-moi')}}">
+                                <!--<a href="{{route('luot-choi.them-moi')}}">
                                         <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
-                                    </a>
+                                    </a>-->
 
                                 <h1></h1><br>
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
@@ -115,11 +115,11 @@
                                                         <i class="fe-delete"></i>
                                                     </button>
                                                 </a>
-                                                <a href="{{ route('luot-choi.chinh-sua',['id'=>$luotchoi->id])}}">
+                                                <!--<a href="{{ route('luot-choi.chinh-sua',['id'=>$luotchoi->id])}}">
                                                     <button type="button" class="btn btn-secondary waves-effect">
                                                         <i class="fe-edit"></i>
                                                     </button>
-                                                </a>
+                                                </a>-->
 
                                             </td>
                                             <td>

@@ -28,7 +28,11 @@
 @endsection
 @section('main-content')
 <div class="wrapper">
-
+        @if(session('thong_diep'))
+        <div class="alert alert-success">
+        <h1>{{session('thong_diep')}}</h1>
+        </div>
+        @endif
         <div class="container-fluid">
                 <h1 class="justify-content-center" > TEAM 36</h1>
         <div class="row">

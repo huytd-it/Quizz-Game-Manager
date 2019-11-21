@@ -42,9 +42,16 @@
 @endsection
 @section('main-content')
 <div class="row">
+
                     <div class="col-12">
                         <div class="card">
+
                             <div class="card-body">
+                                    @if(session('thong_diep'))
+                                    <div class="alert alert-success">
+                                    {{session('thong_diep')}}
+                                    </div>
+                                    @endif
                                 <h2>Danh sách lĩnh vực</h2>
                                 <p class="text-muted font-13 mb-4">
                                 </p>

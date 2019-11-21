@@ -41,11 +41,29 @@ class LinhVucController extends Controller
      */
     public function store(Request $request)
     {
-        $linhvuc = new LinhVuc();
-        $linhvuc->ten_linh_vuc = $request->ten_linh_vuc;
-        $linhvuc->save();
-        return redirect()->route('linh-vuc.danh-sach');
+        $request->validate([
+            'ten_linh_vuc'=>'required|max:20|min:5',
+        ]);
+        $thong_diep = '';
+        if($this->CheckLinhVucNameExist($request->ten_linh_vuc)){
+            $thong_diep = "Tên đã tồn tại";
+        }
+        else{
+            $linhvuc = new LinhVuc();
+            $linhvuc->ten_linh_vuc = $request->ten_linh_vuc;
+            $linhvuc->save();
+            $thong_diep = 'Thêm lĩnh vực thành công';
 
+        }
+        return redirect()->route('linh-vuc.danh-sach')->with('thong_diep',$thong_diep);
+
+    }
+    public function CheckLinhVucNameExist($tenlinhvuc)
+    {
+        if(DB::table('linh_vuc')->where('ten_linh_vuc',$tenlinhvuc)->exists())
+            return true;
+        return false;
+        # code...
     }
 
     /**
