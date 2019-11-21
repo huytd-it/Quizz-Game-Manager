@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\LinhVucRequest;
 use App\LinhVuc;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -96,10 +98,16 @@ class LinhVucController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(LinhVucRequest $request, $id)
     {
-        LinhVuc::where('id',$id)->update(['ten_linh_vuc'=> $request->ten_linh_vuc]);
-        return \redirect()->route('linh-vuc.danh-sach');
+        if($this->CheckLinhVucNameExist($request->ten_linh_vuc)){
+            $thong_diep = 'Tên lĩnh vực này đã tồn tại';
+        }
+        else{
+            LinhVuc::where('id',$id)->update(['ten_linh_vuc'=> $request->ten_linh_vuc]);
+            $thong_diep= 'Cập nhật lĩnh vực thành công';
+        }
+        return \redirect()->route('linh-vuc.danh-sach')->with('thong_diep',$thong_diep);
     }
 
     /**

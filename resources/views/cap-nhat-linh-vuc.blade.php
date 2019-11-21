@@ -29,7 +29,18 @@
 @section('main-content')
 <div class="row">
     <div class="col-lg-12 ">
-            <h4 class="header-title ">Cập nhật lĩnh vực</h4>
+        @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error}}</li>
+            @endforeach
+            </ul>
+        </div>
+        @endif
+        <div class="card row">
+            <h2>Cập nhật lĩnh vực</h2>
+        </div>
         <div class="card-box row justify-content-center">
 
             <form action="{{ route('linh-vuc.cap-nhat',['id'=>$id])}}" method="POST" class="parsley-examples col-xl-6 ">
@@ -37,7 +48,7 @@
 
                 <div class="form-group ">
                     <label for="ten_linh_vuc">Tên lĩnh vực<span class="text-danger">*</span></label>
-                    <input type="text" value="{{ $lv->ten_linh_vuc }}" name="ten_linh_vuc"  parsley-trigger="change" required
+                    <input type="text" value="{{ $lv->ten_linh_vuc }}" name="ten_linh_vuc"  parsley-trigger="change"
                            placeholder="Nhập tên lĩnh vực" class="form-control" id="ten_linh_vuc">
                 </div>
                 <div class="form-group text-right mb-0">
@@ -51,6 +62,7 @@
 
             </form>
         </div> <!-- end card-box -->
+
     </div>
     <!-- end col -->
 
