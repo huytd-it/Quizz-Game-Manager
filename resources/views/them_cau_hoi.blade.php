@@ -11,12 +11,16 @@
             <div class="form-group mb-12">
                 <label for="simpleinput">Chọn lĩnh vực: <span class="text-danger">*</span></label>
                 <select name ="id_linh_vuc" class="form-control" data-style="btn-light">
-                        <option value ="1">Toán</option>
+                    @foreach ($dslinhvuc  as $item)
+                        @if($item->deleted_at == null)
+                            <option value ="{{$item->id}}">{{ $item->ten_linh_vuc }}</option>
+                        @endif
+                    @endforeach
                 </select>
             </div>
         </div>
     </div>
-        <div class="col-lg-12 ">    
+        <div class="col-lg-12 ">
             <div class="col-lg-12">
                 <div class="form-group mb-12">
                     <label for="simpleinput">Nội dung câu hỏi: <span class="text-danger">*</span></label>
@@ -55,10 +59,9 @@
             </div>
             <div class="col-lg-12" >
                 <button type="submit" name ="btn_them" class="btn btn-success btn-rounded waves-effect waves-light"><b>Thêm Câu Hỏi</b></button>
-                <button type="submit" name ="btn_sua" class="btn btn-primary btn-rounded waves-effect waves-light"><b>Sửa Câu Hỏi</b></button>
 
             </div>
     </div>
-</form> 
+</form>
 </div>
 @endsection

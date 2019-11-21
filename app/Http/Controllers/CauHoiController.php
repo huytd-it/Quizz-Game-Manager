@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CauHoi;
+use App\LinhVuc;
 use Illuminate\Support\Facades\DB;
 
 class CauHoiController extends Controller
@@ -19,6 +20,11 @@ class CauHoiController extends Controller
         return view('ds_cau_hoi',compact('cauHoi'));
     }
 
+    public function thungrac()
+    {
+        $thungrac=  DB::table('cau_hois')->get();
+        return view('thung_rac_cau_hoi',compact('thungrac'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +32,8 @@ class CauHoiController extends Controller
      */
     public function create()
     {
-        return view('them_cau_hoi');
+        $dslinhvuc = DB::table('linh_vuc')->get();
+        return view('them_cau_hoi',compact('dslinhvuc'));
     }
 
     /**
@@ -68,7 +75,9 @@ class CauHoiController extends Controller
      */
     public function edit($id)
     {
-        return view('sua_cau_hoi',['id'=>$id]);
+
+        $cauhoi = CauHoi::find($id);
+        return view('sua_cau_hoi',['id'=>$id],compact('cauhoi'));
     }
 
     /**
@@ -98,4 +107,12 @@ class CauHoiController extends Controller
         $id->delete();
         return redirect()->route('cau_hoi.ds_cau_hoi');
     }
+
+    public function khoiphuc($id)
+    {
+        CauHoi::withTrashed()->find($id)->restore();
+        return redirect()->route('cau_hoi.ds_cau_hoi');
+    }
+
+
 }

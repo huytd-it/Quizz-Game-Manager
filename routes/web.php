@@ -56,6 +56,8 @@ Route::middleware('checklogin')->group(function(){
             Route::get('{id}/xoa','CauHoiController@destroy')->name('xoa_cau_hoi');
             Route::post('{id}/cap_nhat','CauHoiController@update')->name('cap_nhat_cau_hoi');
             Route::get('{id}/hien_thi_sua','CauHoiController@edit')->name('hien_thi_view_cap_nhat');
+            Route::get('/thung_rac','CauHoiController@thungrac')->name('thung_rac_cau_hoi');
+            Route::get('{id}/khoi_phuc','CauHoiController@khoiphuc')->name('khoi_phuc_cau_hoi');
         });
     });
     //Phân người chơi

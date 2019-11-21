@@ -164,6 +164,9 @@
                             <li>
                                 <a href="{{route('cau_hoi.them_moi')}}">Thêm Câu Hỏi</a>
                             </li>
+                            <li>
+                                <a href="{{route('cau_hoi.thung_rac_cau_hoi')}}">Thùng Rác Câu Hỏi</a>
+                            </li>
                         </ul>
                     </li>
 
