@@ -9,9 +9,7 @@ class LinhVuc extends Model
 
     use SoftDeletes;
     protected $table = 'linh_vuc';
-    protected $fieldable = ['id',
-                            'ten_linh_vuc'];
-
+    protected $fillable = ['id','ten_linh_vuc'];
     protected $deleted = ['deleted_at'];
 
     protected function create(array $data){

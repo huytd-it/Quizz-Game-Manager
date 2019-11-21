@@ -67,7 +67,7 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Tên lĩnh vực</th>
-                                            <th>Xóa/Sữa</th>
+                                            <th>Xóa / Sửa</th>
                                         </tr>
                                     </thead>
                                     <tbody>

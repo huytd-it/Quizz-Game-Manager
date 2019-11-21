@@ -48,7 +48,7 @@ class LinhVucController extends Controller
         ]);
         $thong_diep = '';
         if($this->CheckLinhVucNameExist($request->ten_linh_vuc)){
-            $thong_diep = "Tên đã tồn tại";
+            $thong_diep = "Tên đã tồn tại trong cơ sở dữ liệu";
         }
         else{
             $linhvuc = new LinhVuc();
@@ -101,7 +101,7 @@ class LinhVucController extends Controller
     public function update(LinhVucRequest $request, $id)
     {
         if($this->CheckLinhVucNameExist($request->ten_linh_vuc)){
-            $thong_diep = 'Tên lĩnh vực này đã tồn tại';
+            $thong_diep = 'Tên lĩnh vực này đã tồn tại trong cơ sở dữ liệu';
         }
         else{
             LinhVuc::where('id',$id)->update(['ten_linh_vuc'=> $request->ten_linh_vuc]);
@@ -118,13 +118,18 @@ class LinhVucController extends Controller
      */
     public function destroy($id)
     {
+
         $id_xoa = LinhVuc::find($id);
+        $thong_diep = 'Xóa thành công '.$id_xoa->ten_linh_vuc;
         $id_xoa->delete();
-        return redirect()->route('linh-vuc.danh-sach');
+
+        return redirect()->route('linh-vuc.danh-sach')->with('thong_diep',$thong_diep);
     }
     public function restore($id)
     {
-         LinhVuc::withTrashed()->find($id)->restore();
-        return  \redirect()->route('linh-vuc.danh-sach');
+        $lv = LinhVuc::withTrashed()->find($id);
+        $thong_diep = 'Khôi phục thành công lĩnh vực '.$lv->ten_linh_vuc;
+        $lv->restore();
+        return  \redirect()->route('linh-vuc.danh-sach')->with('thong_diep',$thong_diep);
     }
 }

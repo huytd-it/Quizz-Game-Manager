@@ -45,7 +45,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Danh sách lĩnh vực</h4>
+                                <h4 class="header-title">Danh sách lĩnh vực đã xóa</h4>
                                 <p class="text-muted font-13 mb-4">
                                 </p>
                                 <a href="{{route('linh-vuc.them-moi')}}">
