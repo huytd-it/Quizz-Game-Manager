@@ -46,12 +46,12 @@
                                             <th>PHƯƠNG ÁN C</th>
                                             <th>PHƯƠNG ÁN D</th>
                                             <th>ĐÁP ÁN</th>
-                                            <th>XÓA/SỮA</th>
+                                            <th>KHÔI PHỤC</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       @foreach($cauHoi as $ch)
-                                        @if($ch->deleted_at == null)
+                                       @foreach($thungrac as $ch)
+                                        @if($ch->deleted_at != null)
                                         <tr>
                                             <td>{{$ch->id}}</td>
                                             <td>{{$ch->noi_dung}}</td>
@@ -62,11 +62,8 @@
                                             <td>{{$ch->phuong_an_D}}</td>
                                             <td>{{$ch->dap_an}}</td>
                                             <td>
-                                                <a href="{{route('cau_hoi.xoa_cau_hoi',['id'=>$ch->id])}}">
-                                            <button  type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
-                                                </a>
-                                                <a href="{{route('cau_hoi.hien_thi_view_cap_nhat',['id'=>$ch->id])}}">
-                                             <button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
+                                                <a href="{{route('cau_hoi.khoi_phuc_cau_hoi',['id'=>$ch->id])}}">
+                                                    <button  type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="icon-reload"></i></button>
                                                 </a>
                                             </td>
                                         </tr>
