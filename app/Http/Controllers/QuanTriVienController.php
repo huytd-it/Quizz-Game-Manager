@@ -20,10 +20,7 @@ class QuanTriVienController extends Controller
         $mat_khau = $request->mat_khau;
 
         if(Auth::attempt(['ten_dang_nhap' => $ten_dang_nhap, 'password' => $mat_khau])){
-            $user = $this->layThongTin();
             return \redirect()->route('trang-chu')->with('thong_diep','Đăng nhập thành công');
-
-
         }
         return redirect()->route('dang_nhap')->with('thong_diep','Đăng nhập thất bại');
     }
