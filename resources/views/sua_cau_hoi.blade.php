@@ -11,7 +11,11 @@
             <div class="form-group mb-12">
                 <label for="simpleinput">Chọn lĩnh vực: <span class="text-danger">*</span></label>
                 <select name ="id_linh_vuc" class="form-control" data-style="btn-light">
-                    <option value="1">Toán</option>
+                    @foreach($dslinhvuc as $linhvuc)
+                    @if($linhvuc->deleted_at==null)
+                    <option value="{{$linhvuc->id}}">{{$linhvuc->ten_linh_vuc}}</option>
+                    @endif
+                    @endforeach
                 </select>
             </div>
         </div>

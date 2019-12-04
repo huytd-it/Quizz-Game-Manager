@@ -16,7 +16,9 @@ class CauHoiController extends Controller
      */
     public function index()
     {
-        $cauHoi = DB::table('cau_hois')->where('trang_thai','1')->get();
+        $cauHoi = DB::table('cau_hois')
+        ->join('linh_vuc','linh_vuc.id','=','cau_hois.id_linh_vuc')
+        ->select('cau_hois.*','linh_vuc.*')->get();
         return view('ds_cau_hoi',compact('cauHoi'));
     }
 
@@ -75,9 +77,9 @@ class CauHoiController extends Controller
      */
     public function edit($id)
     {
-
+        $dslinhvuc = DB::table('linh_vuc')->get();
         $cauhoi = CauHoi::find($id);
-        return view('sua_cau_hoi',['id'=>$id],compact('cauhoi'));
+        return view('sua_cau_hoi',['id'=>$id],compact('cauhoi','dslinhvuc'));
     }
 
     /**
@@ -89,6 +91,7 @@ class CauHoiController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         CauHoi::where('id',$id)->update(['noi_dung'=>$request->noi_dung_cau_hoi,'id_linh_vuc'=>$request->id_linh_vuc,
         'phuong_an_A'=>$request->phuong_an_A,'phuong_an_B'=>$request->phuong_an_B,'phuong_an_C'=>$request->phuong_an_C,'phuong_an_D'=>$request->phuong_an_D,
         'dap_an'=>$request->dap_an]);
@@ -103,8 +106,8 @@ class CauHoiController extends Controller
      */
     public function destroy($id)
     {
-        $id = CauHoi::find($id);
-        $id->delete();
+        $idch = CauHoi::find($id);
+        $idch->delete();
         return redirect()->route('cau_hoi.ds_cau_hoi');
     }
 

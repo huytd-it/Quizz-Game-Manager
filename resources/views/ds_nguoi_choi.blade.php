@@ -30,11 +30,7 @@
                     <div class="col-lg-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <h1 class="header-title">Danh Sách Người Chơi</h1>
-                                <a href="{{route('nguoi_choi.them_moi_nguoi_choi')}}">
-                                <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
-                                </a>
-                                <h1></h1><br>
+                                <h1 class="header-title">Danh Sách Người Chơi</h1><br>
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
                                     <thead>
                                         <tr>
@@ -44,7 +40,7 @@
                                             <th>HINH ĐẠI DIỆN</th>
                                             <th>ĐIỂM CAO NHẤT</th>
                                             <th>CREDIT</th>
-                                            <th>XÓA/SỮA</th>
+                                            <th>XEM CHI TIẾT</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -61,15 +57,12 @@
                                                 <a href="{{route('nguoi_choi.xoa_nguoi_choi',['id'=>$nc->id])}}" >
                                                     <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button>
                                                 </a>
-                                             <button  type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button>
                                             </td>
                                         </tr>
                                         @endif
                                         @endforeach
                                     </tbody>
-
                                 </table>
-
                             </div> <!-- end card body-->
                         </div> <!-- end card -->
                     </div><!-- end col-->

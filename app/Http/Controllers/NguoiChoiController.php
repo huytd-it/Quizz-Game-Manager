@@ -55,6 +55,12 @@ class NguoiChoiController extends Controller
 
     }
 
+    public function XemChiTiet($id){
+
+        DB::table('');
+
+    }
+
     /**
      * Display the specified resource.
      *
