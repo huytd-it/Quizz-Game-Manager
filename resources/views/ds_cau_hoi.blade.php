@@ -46,16 +46,16 @@
                                             <th>PHƯƠNG ÁN C</th>
                                             <th>PHƯƠNG ÁN D</th>
                                             <th>ĐÁP ÁN</th>
-                                            <th>XÓA/SỮA</th>
+                                            <th>XÓA/SỬA</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                        @foreach($cauHoi as $ch)
-                                        @if($ch->deleted_at == null)
+                                       @if($ch->deleted_at == null and $ch->trang_thai == 1)
                                         <tr>
                                             <td>{{$ch->id}}</td>
                                             <td>{{$ch->noi_dung}}</td>
-                                            <td>{{$ch->id_linh_vuc}}</td>
+                                            <td>{{$ch->ten_linh_vuc}}</td>
                                             <td>{{$ch->phuong_an_A}}</td>
                                             <td>{{$ch->phuong_an_B}}</td>
                                             <td>{{$ch->phuong_an_C}}</td>

@@ -59,7 +59,6 @@
             </div>
             <div class="col-lg-12" >
                 <button type="submit" name ="btn_them" class="btn btn-success btn-rounded waves-effect waves-light"><b>Thêm Câu Hỏi</b></button>
-
             </div>
     </div>
 </form>
