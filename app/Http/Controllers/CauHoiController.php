@@ -38,6 +38,7 @@ class CauHoiController extends Controller
         return view('them_cau_hoi',compact('dslinhvuc'));
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
