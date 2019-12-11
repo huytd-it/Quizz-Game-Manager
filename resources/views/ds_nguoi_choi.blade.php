@@ -54,8 +54,6 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
-                    <h4>Điểm</h4>
-                    <p>{{$ctnc->diem}}</p>
                     <h4>Số Credit đã mua </h4>
                     <p{{$ctnc->credit}}></p>
                     <h4>Tổng số tiền</h4>
