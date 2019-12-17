@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ThemGoiCreditSeeder::class);
         $this->call(ThemCauHoiSeerder::class);
         $this->call(LuotChoiSeeder::class);
-        $this->call(LichSuMuaCreditSeeder::Class);
+        $this->call(LichSuMuaCreditSeeder::class);
         $this->call(ChiTietLuotChoiSeeder::class);
 
 

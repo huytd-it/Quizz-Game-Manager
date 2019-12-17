@@ -13,7 +13,7 @@ class LinhVuc extends Model
     protected $deleted = ['deleted_at'];
 
     protected function create(array $data){
-        linh_vuc::create([
+        LinhVuc::create([
             'ten_linh_vuc'=>$data['ten_linh_vuc'],
 
         ]);
