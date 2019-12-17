@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +13,10 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+   return $request->user();
 });
 Route::get('/linh_vuc','API\LinhVucController@GetFieldList')->name('lay-ds');
+
+Route::get('cau_hoi_theo_linh_vuc','API\CauHoiController@GetQuestionList');
+Route::get('tat_ca_cau_hoi','API\CauHoiController@index');
+
