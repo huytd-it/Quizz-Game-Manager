@@ -40,12 +40,11 @@
             });
         </script>
 @endsection
-{{ @section('main-content') }}
+@section('main-content')
 <div class="row">
 
                     <div class="col-12">
                         <div class="card">
-
                             <div class="card-body">
                                     @if(session('thong_diep'))
                                     <div class="alert alert-success">
