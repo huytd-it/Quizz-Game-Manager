@@ -55,9 +55,9 @@
                 </div>
                 <div class="modal-body">
                     <h4>Số Credit đã mua </h4>
-                    <p{{$ctnc->credit}}></p>
+                    <p>{{$ctnc->credit}}</p>
                     <h4>Tổng số tiền</h4>
-                    <p{{$ctnc->so_tien}}></p>
+                    <p>{{$ctnc->so_tien}}</p>
                     <hr>
                 </div>
                 <div class="modal-footer">
