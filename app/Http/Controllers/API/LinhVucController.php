@@ -16,11 +16,19 @@ class LinhVucController extends Controller
    }
    public function GetFieldList()
    {
-       $fieldList = LinhVuc::all()->random(4);
+       $fieldList = LinhVuc::all();
+
+        if($fieldList->count() >=6){
+            $fieldList = LinhVuc::all()->random(6);
+        }
+
+
        $result = [
            'success' => true,
            'data'=>$fieldList,
+
        ];
+
        return response()->json($result);
    }
 }
