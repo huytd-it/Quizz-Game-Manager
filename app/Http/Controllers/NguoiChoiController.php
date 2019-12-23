@@ -19,7 +19,7 @@ class NguoiChoiController extends Controller
         $chitiet = DB::table('nguoi_chois')->join('luot_chois','luot_chois.nguoi_choi_id','=','nguoi_chois.id')
         ->join('lich_su_mua_credits','nguoi_chois.id','=','lich_su_mua_credits.nguoi_choi_id')
         ->select('nguoi_chois.*','luot_chois.*','lich_su_mua_credits.*')->get();
-
+    
         return view('ds_nguoi_choi',compact('nguoiChoi','chitiet'));
     }
 

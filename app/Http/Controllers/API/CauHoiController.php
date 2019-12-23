@@ -72,7 +72,7 @@ class CauHoiController extends Controller
     public function GetQuestionList(Request $request)
     {
         $idlinhvuc = $request->query('linh_vuc_id');
-        $QuestionList = CauHoi::where('id_linh_vuc',$idlinhvuc)->get();
+        $QuestionList = CauHoi::where('id_linh_vuc',$idlinhvuc)->get()->random(15);
         $result =[
             'success'=>true,
             'data'=>$QuestionList,
