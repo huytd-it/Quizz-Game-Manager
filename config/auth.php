@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'admins',
     ],
 
     /*
@@ -36,24 +36,20 @@ return [
     */
 
     'guards' => [
+
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
-        ],
-
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
-        ],
-        'quan_tri_vien' => [
-            'driver' => 'session',
-            'provider' => 'quan_tri_vien',
+            'provider' => 'admins',
         ],
 
         'quan_tri_vien-api' => [
             'driver' => 'token',
             'provider' => 'quan_tri_vien',
+        ],
+
+        'api' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
         ],
     ],
 
@@ -76,10 +72,16 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'admins' => [
             'driver' => 'eloquent',
             'model' => App\QuanTriVien::class,
         ],
+
+        'users' => [
+                'driver' => 'eloquent',
+                'model' => App\NguoiChoi::class,
+         ],
+
 
         // 'users' => [
         //     'driver' => 'database',
@@ -109,10 +111,11 @@ return [
             'expire' => 60,
         ],
         'quan_tri_vien' => [
-            'provider' => 'quan_tri_vien',
+            'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
     ],
 
 ];
