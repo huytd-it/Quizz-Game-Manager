@@ -132,4 +132,5 @@ class LinhVucController extends Controller
         $lv->restore();
         return  \redirect()->route('linh-vuc.danh-sach')->with('thong_diep',$thong_diep);
     }
+  
 }

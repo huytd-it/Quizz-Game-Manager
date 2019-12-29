@@ -14,7 +14,6 @@
 })->name('dashboard');
 */
 
-use App\Http\Controllers\CauHoiController;
 
 Route::get('/', 'QuanTriVienController@dangnhap')->name('dang_nhap');
 Route::post('/','QuanTriVienController@xulyDangNhap')->name('xy_ly_dang_nhap');
@@ -78,6 +77,8 @@ Route::middleware('checklogin')->group(function(){
             Route::get('{id}/chinh-sua','GoiCreditController@edit')->name('chinh-sua');
             Route::post('{id}/cap-nhat','GoiCreditController@update')->name('cap-nhat');
             Route::get('{id}/xoa','GoiCreditController@destroy')->name('xoa');
+            Route::get('{id}/khoi-phuc','GoiCreditController@restore')->name('khoi-phuc');
+            Route::get('/thung_rac','GoiCreditController@recycle')->name('thung_rac');
         });
     });
 
