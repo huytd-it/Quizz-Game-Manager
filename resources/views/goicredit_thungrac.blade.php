@@ -30,19 +30,11 @@
                     <div class="col-lg-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <h1 class="header-title">Danh sách gói credit</h1>
+                                <h1 class="header-title">Danh sách gói credit đã xóa</h1>
                                 <a href="{{route('goi_credit.them-moi')}}">
                                 <button  type="button" class="btn btn-rounded btn-success waves-effect waves-light"><i class="fe-plus-circle"></i></button>
                                 </a>
-                                <a href="{{route('goi_credit.thung_rac')}}">
-                                        <button  type="button" class="btn btn-rounded btn btn-purple waves-effect waves-light"><i class="fe-trash-2"></i></button>
-                                    </a>
                                 <h1></h1><br>
-                                @if(session('thong_diep'))
-                                    <div class="alert alert-success">
-                                    {{session('thong_diep')}}
-                                    </div>
-                                    @endif
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
                                     <thead>
                                         <tr>
@@ -55,15 +47,17 @@
                                     </thead>
                                     <tbody>
                                        @foreach($goiCredit as $goi)
-                                       @if($goi->deleted_at == null)
+                                       @if($goi->deleted_at!=null)
                                         <tr>
                                             <td>{{$goi->id}}</td>
                                             <td>{{$goi->ten_goi}}</td>
                                             <td>{{$goi->credit}}</td>
                                             <td>{{$goi->so_tien}}</td>
                                             <td>
-                                            <a href="{{ route('goi_credit.xoa',['id'=>$goi->id])}}"> <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light"><i class="fe-delete"></i></button></a>
-                                            <a href="{{ route('goi_credit.chinh-sua',['id'=>$goi->id])}}"><button type="button" class="btn btn-secondary btn-rounded waves-effect"><i class="fe-edit"></i></button></a>
+                                            <a href="{{ route('goi_credit.khoi-phuc',['id'=>$goi->id])}}">
+                                                    <button type="button" class="btn btn-danger btn-rounded waves-effect waves-light">
+                                                        <i class="fe-rotate-ccw">
+                                                </i></button></a>
                                             </td>
                                         </tr>
                                         @endif
