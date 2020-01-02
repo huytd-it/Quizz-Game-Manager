@@ -24,7 +24,8 @@ class LinhVucController extends Controller
 
 
        $result = [
-           'success' => true,
+           'status' => true,
+           'message'=>'completed',
            'data'=>$fieldList,
 
        ];
