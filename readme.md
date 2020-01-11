@@ -1,5 +1,7 @@
 ## Triển khai lên hosting
-- [CmsAndroidGame](https://cmsandroidgame.000webhostapp.com/).
+- [Cms Android Game](https://cmsandroidgame.000webhostapp.com/)**.
+## Demo
+![DEMO](demo_img/Đăng nhập.png)
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
