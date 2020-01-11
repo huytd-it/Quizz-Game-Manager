@@ -18,8 +18,8 @@ class LinhVucController extends Controller
    {
        $fieldList = LinhVuc::all();
 
-        if($fieldList->count() >=6){
-            $fieldList = LinhVuc::all()->random(6);
+        if($fieldList->count() >=4){
+            $fieldList = LinhVuc::all()->random(4);
         }
 
 

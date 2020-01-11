@@ -39,7 +39,7 @@ class GoiCreditController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $thong_diep = '';
         if($this->checkNameExit($request->ten_goi_credit)){
             $thong_diep = "Tên đã tồn tại trong cơ sở dữ liệu";
@@ -82,8 +82,9 @@ class GoiCreditController extends Controller
      public function checkNameExit($ten_goi_credit)
      {
          if(DB::table('goi_credit')->where('ten_goi',$ten_goi_credit)->exists())
-         return true;
-     return false;
+            return true;
+         else
+            return false;
      }
     /**
      * Update the specified resource in storage.
@@ -94,16 +95,30 @@ class GoiCreditController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $thong_diep= 'cập nhật gói credit thành công';
+        $thong_diep= 'cập nhật gói credit thất bại';
+        $row=DB::table('goi_credit')
+        ->where('ten_goi',$request->ten_goi_credit)
+        ->first();
+        if($request->ten_goi_credit===$row->ten_goi)
+        {
+            GoiCredit::where('id',$id)->update([
+            'credit'=>$request->so_credit,
+            'so_tien'=>$request->so_tien
+]);
+            $thong_diep= 'cập nhật gói credit thành công';
+        }
+        if(!$this->checkNameExit($request->ten_goi_credit)){
         GoiCredit::where('id',$id)->update(['ten_goi'=> $request->ten_goi_credit,
                                          'credit'=>$request->so_credit,
                                          'so_tien'=>$request->so_tien
         ]);
-    
+        $thong_diep= 'cập nhật gói credit thành công';
+        }
+
         return redirect()->route('goi_credit.danh-sach')->with('thong_diep',$thong_diep);
     }
 
-   
+
     /**
      * Remove the specified resource from storage.
      *

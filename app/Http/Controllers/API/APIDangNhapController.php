@@ -80,6 +80,25 @@ class APIDangNhapController extends Controller
             'data'=>[ 'ten_dang_nhap'=>$request->ten_dang_nhap,'mat_khau'=>$request->mat_khau]
         ]);
     }
+    public function update(Request $request)
+    {
+
+        $nguoiChoi = new NguoiChoi();
+
+        $status = true;
+        $nguoiChoi->ten_dang_nhap = $request->ten_dang_nhap;
+        $nguoiChoi->mat_khau = Hash::make($request->mat_khau);
+
+        $nguoiChoi->email = $request->email;
+
+
+        return response()->json(
+            [
+            'status' => $status,
+            'message'=>'Success',
+            'data'=>[ 'ten_dang_nhap'=>$request->ten_dang_nhap,'mat_khau'=>$request->mat_khau]
+        ]);
+    }
     public function user()
     {
         return response()->json(

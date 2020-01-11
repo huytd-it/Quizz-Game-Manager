@@ -76,9 +76,9 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
+                                            <th>HINH ĐẠI DIỆN</th>
                                             <th>TÊN ĐĂNG NHẬP</th>
                                             <th>EMAIL</th>
-                                            <th>HINH ĐẠI DIỆN</th>
                                             <th>ĐIỂM CAO NHẤT</th>
                                             <th>CREDIT</th>
                                             <th>XEM CHI TIẾT</th>
@@ -89,11 +89,12 @@
                                        @if($nc->deleted_at==null)
                                         <tr>
                                             <td>{{$nc->id}}</td>
+                                            <td>
+                                                <img src='images/small/{{$nc->hinh_dai_dien}}' class="rounded float-left" width="auto" height="50">
+                                            </td>
                                             <td>{{$nc->ten_dang_nhap}}</td>
                                             <td>{{$nc->email}}</td>
-                                            <td>
-                                                {{$nc->hinh_dai_dien}}
-                                            </td>
+
                                             <td>{{$nc->diem_cao_nhat}}</td>
                                             <td>{{$nc->credit}}</td>
                                             <td>
