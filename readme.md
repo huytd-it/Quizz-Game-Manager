@@ -1,5 +1,10 @@
 ## Triển khai lên hosting
 - [Cms Android Game](https://cmsandroidgame.000webhostapp.com/).
+## Thiết kế
+- Mô hình ERD
+![DEMO](demo_img/erd.png)
+- Mô hình Use-Case
+![DEMO](demo_img/usecase.png)
 ## Demo
 - Đăng nhập
 ![DEMO](demo_img/Screenshot_2020-01-11%20Đăng%20nhập.png)
