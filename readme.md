@@ -1,7 +1,22 @@
 ## Triển khai lên hosting
-- [Cms Android Game](https://cmsandroidgame.000webhostapp.com/)**.
+- [Cms Android Game](https://cmsandroidgame.000webhostapp.com/).
 ## Demo
-![DEMO](demo_img/Đăng nhập.png)
+- Đăng nhập
+![DEMO](demo_img/Screenshot_2020-01-11 Đăng nhập.png)
+- 
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(1).png)
+-
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(2).png)
+-
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(3).png)
+-
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(4).png)
+-
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(5).png)
+-
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(6).png)
+-
+![DEMO](demo_img/Screenshot_2020-01-11 CMS Game(7).png)
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
