@@ -3,19 +3,15 @@
 ## Demo
 - Đăng nhập
 ![DEMO](demo_img/Screenshot_2020-01-11%20Đăng%20nhập.png)
-- 
+- Lĩnh vực câu hỏi
 ![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game.png)
--
-![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game(2).png)
--
+- Danh sách lượt chơi
 ![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game(3).png)
--
+- Chi tiết lượt chơi
 ![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game(4).png)
--
+- Danh sách câu hỏi
 ![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game(5).png)
--
-![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game(6).png)
--
+- Thêm câu hỏi
 ![DEMO](demo_img/Screenshot_2020-01-11%20CMS%20Game(7).png)
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
